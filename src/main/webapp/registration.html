@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/registration.css">
+<script src="assets/js/jquery-slim.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+<script src="https://unpkg.com/vue-router@4"></script>
+<body>
+
+
+<html>
+<head>
+  <title>Register form</title>
+<script>
+function validate() {
+
+    var account = document.getElementById("account").value;
+
+    var password = document.getElementById("password").value;
+
+    var cpassword = document.getElementById("cpassword").value;
+
+
+    if (account == "") {
+        alert("il campo account non può essere lasciato vuoto")
+    } else {
+        if (password != "") {
+            if (password == cpassword) {
+                document.registro.submit();
+            } else
+                alert("le password non coincidono ")
+        } else
+            alert("il campo password non può essere lasciato vuoto")
+    }
+}
+
+
+</script>
+
+</head>
+
+<body>
+<div class="container ftco-section">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center mb-3">
+            <h2 class="heading-section">Benvenut* nella pagina di Registrazione di Lesson Booking !</h2>
+        </div>
+
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="login-wrap px-4 px-md-5 py-3 py-md-4">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <i class="ri-account-circle-line ri-xl text-white"></i>
+                </div>
+                <form name ="registro"method="get" action="register">
+
+                    <div class="form-group">
+                        <input type="text" class="form-control rounded-left"
+                                 name="account" id = "account" required  >
+
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control rounded-left"
+                               placeholder="Inserisci una Password" name="password" id = "password" required>
+
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control rounded-left"
+                               placeholder="Conferma la Password"name="cpassword" id="cpassword" required>
+                        <div class="invalid-feedback">
+                            Per accedere, inserisci una password.
+                        </div>
+                    </div>
+          <!--          <div class="form-group">
+                        <input type="text" class="form-control rounded-left"
+                               placeholder="Ruolo"name="role" id = "role"required>
+
+                    </div> -->
+                    <div class ="form-group text-center">
+
+                       <a type="button" id = "guestBtn "class ="btn btn-success rounded  submit p-3 px-5" href="javascript:validate()"> Registrati</a>
+
+                    </div>
+                </form>
+
+                <div class="text-center">
+                    <a href="index.html">Hai già un account? Accedi</a>
+                </div>
+
+                <p id="result-msg" class="text-center"></p>
+            </div>
+        </div>
+    </div>
+
+
+ <!-- <form   name ="registro"method="get" action="register">
+  account:<input type="text" name="account" id = account required /><br/>
+  passwxord:<input type="password" name="password" id = "password" required/><br/>
+    Conferma Password:<input type="password" name="cpassword" id="cpassword" required/><br/>
+  role:<input type="text" name="role" required/><br/>
+  <a href="javascript:validate()"> Submit</a> -->
+
+</div>
+</body>
+</html>
+
+
+
+</body>
+</html>
